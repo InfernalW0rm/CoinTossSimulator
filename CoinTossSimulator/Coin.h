@@ -6,13 +6,14 @@ using namespace std;
 class Coin
 {
 private:
-	bool isHeads;
+	int boolVal;
+	bool isHeadsTrue;
 	const int centValue;
 public:
 	Coin();
 	Coin(int value);
 	void flip();
-	bool isHeads();
-	string getSideUp();
+	bool isHeads() const;
+	string getSideUp() const;
 };
 #endif
