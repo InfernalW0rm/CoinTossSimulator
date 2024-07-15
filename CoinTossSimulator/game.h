@@ -9,10 +9,10 @@ private:
     Coin coins[3];
     int totalScore;
     int rounds;
-
-public:
     void printFlipResults();
     void FlipCoins(); 
+
+public:
     void printScore();
     int getRounds();
     int getScore();
@@ -20,5 +20,3 @@ public:
     void playGame();
 };
 #endif
-
-
