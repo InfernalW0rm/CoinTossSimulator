@@ -32,3 +32,9 @@ string Coin::getSideUp() const
 	else
 		return "Tails";
 };
+int Coin::getCentValue() const
+{
+	
+	return centValue;
+
+};

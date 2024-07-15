@@ -15,5 +15,6 @@ public:
 	void flip();
 	bool isHeads() const;
 	string getSideUp() const;
+	int getCentValue() const;
 };
 #endif

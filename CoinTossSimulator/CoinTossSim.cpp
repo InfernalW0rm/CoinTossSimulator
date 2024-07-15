@@ -5,8 +5,6 @@ using namespace std;
 
 int main()
 {
-	Coin Quarter;
-	Coin Dime;
-	Coin Nickle;
+	
 
 };
