@@ -8,6 +8,7 @@ void Game::printFlipResults()
 {
     std::cout << totalScore;
 }
+
 void Game::FlipCoins()
 {
     for (int i = 0; i < 3; i++)
@@ -15,15 +16,16 @@ void Game::FlipCoins()
         coins[i].flip();
         if (coins[i].isHeads())
         {
-            totalScore += centValue;
-
+            totalScore += coins[i].getCentValue();
+            std::cout << coins[i].getCentValue() << std::endl;
         }
     }
     rounds += 1;
 }
 void Game::printScore()
 {
-    std::cout<<totalScore;
+    std::cout << "You have " << totalScore << " cents." << std::endl
+              << std::endl;
 }
 int Game::getRounds()
 {
@@ -35,9 +37,19 @@ int Game::getScore()
 }
 Game::Game()
 {
-    Coin coins[3] = {Coin(25), Coin(10), Coin(5)};
 }
 void Game::playGame()
 {
-
+    Game();
+    totalScore = 0;
+    while (totalScore < 100)
+    {
+        if (totalScore > 100)
+        {
+            break;
+        }
+        std::cout << "Round " << getRounds() << ": " << std::endl;
+        FlipCoins();
+        printScore();
+    }
 }

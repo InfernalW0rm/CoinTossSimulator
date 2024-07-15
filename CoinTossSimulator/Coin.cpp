@@ -3,20 +3,18 @@
 #include <string>
 using namespace std;
 
-Coin::Coin() :
-	centValue(1)
+Coin::Coin() : centValue(1)
 {
 	flip();
 };
-Coin::Coin(int value) :
-	centValue(value)
+Coin::Coin(int value) : centValue(value)
 {
 	flip();
 };
-void Coin::flip() 
+void Coin::flip()
 {
 	boolVal = rand() % 2;
-	if (boolVal = 1)
+	if (boolVal == 1)
 		isHeadsTrue = true;
 	else
 		isHeadsTrue = false;
@@ -34,7 +32,6 @@ string Coin::getSideUp() const
 };
 int Coin::getCentValue() const
 {
-	
-	return centValue;
 
+	return centValue;
 };
